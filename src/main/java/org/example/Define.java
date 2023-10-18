@@ -6,14 +6,12 @@ import java.util.Stack;
 
 public class Define implements Command {
     Map<String,Double> parameters;
-    Stack<Double> stack;
     List<String> arguments;
     Define(Stack<Double> stack, List<String> arguments, Map<String,Double> parameters) {
-        this.stack = stack;
         this.arguments = arguments;
         this.parameters = parameters;
     }
-    Define() {}
+
     @Override
     public void toDo() throws Exception{
         char[] ch = arguments.get(0).toCharArray();
