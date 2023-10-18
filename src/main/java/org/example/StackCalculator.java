@@ -7,11 +7,9 @@ import java.util.Stack;
 
 public class StackCalculator {
     public void startWork() {
-        Scanner in = new Scanner(System.in);
+        Scanner in = new Scanner(System.in); //Сделаю с файла, когда тесты писать буду
         String command = in.nextLine();
-        Stack<ValueGetter> values = new Stack<>();
-        StackValues stack = new StackValues();
-        stack.setStack(values);
+        Stack<Double> values = new Stack<>();
         Map<String,Double> parameters = new HashMap<>();
         while (!command.contains("end")) {
             String[] parts = command.split(" ");
@@ -25,25 +23,25 @@ public class StackCalculator {
                         case "":
                             break;
                         case "POP":
-                            stack.popStack();
+                            values.pop();
                             break;
                         case "PRINT":
-                            System.out.println(stack.lookTopStack().getValue());
+                            System.out.println(values.peek());
                             break;
                         case "SQRT":
-                            values.push(new ValueGetter(Math.pow(stack.getValueFromStack().getValue(), 0.5)));
+                            values.push(Math.pow(values.pop(), 0.5));
                             break;
                         case "+":
-                            values.push(new ValueGetter(stack.getValueFromStack().getValue() + stack.getValueFromStack().getValue()));
+                            values.push(values.pop() + values.pop());
                             break;
                         case "-":
-                            values.push(new ValueGetter(stack.getValueFromStack().getValue() - stack.getValueFromStack().getValue()));
+                            values.push(values.pop() - values.pop());
                             break;
                         case "*":
-                            values.push(new ValueGetter(stack.getValueFromStack().getValue() * stack.getValueFromStack().getValue()));
+                            values.push(values.pop() * values.pop());
                             break;
                         case "/":
-                            values.push(new ValueGetter(stack.getValueFromStack().getValue() / stack.getValueFromStack().getValue()));
+                            values.push(values.pop() / values.pop());
                             break;
                         default:
                             System.out.println("There is no such command or invalid amount of arguments");
@@ -53,11 +51,11 @@ public class StackCalculator {
                 case 2:
                     if(parts[0].equals("PUSH")) {
                         if (parameters.containsKey(parts[1])) {
-                            values.push(new ValueGetter(parameters.get(parts[1])));
+                            values.push(parameters.get(parts[1]));
                             break;
                         } else {
                             try {
-                                values.push(new ValueGetter(Double.valueOf(parts[1])));
+                                values.push(Double.valueOf(parts[1]));
                                 break;
                             } catch (Exception e) {
                                 System.out.println("This parameter was not defined");
