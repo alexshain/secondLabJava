@@ -1,11 +1,26 @@
 package org.example;
 
+import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.util.*;
+import java.util.logging.Level;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
 
 public class Factory {
+    static Logger LOGGER;
+
+    static {
+        try(FileInputStream ins = new FileInputStream("/Users/sasha/IdeaProjects/SecondLab/src/main/java/"+
+                "org/example/log.config")){
+            LogManager.getLogManager().readConfiguration(ins);
+            LOGGER = Logger.getLogger(Factory.class.getName());
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
     private final Properties properties;
     Stack<Double> stack;
     List<String> arguments;
@@ -28,6 +43,7 @@ public class Factory {
         var fullName = "org.example." + properties.getProperty(name);
 
         Class<?> targetClass;
+        LOGGER.log(Level.INFO,"Getting a class on command");
         try {
             targetClass = Class.forName(fullName);
         } catch (ClassNotFoundException e) {
@@ -35,6 +51,7 @@ public class Factory {
         }
 
         Command instance;
+        LOGGER.log(Level.INFO,"Initialization of class constructor");
         try {
             instance = (Command) targetClass.getDeclaredConstructor(Stack.class, List.class, Map.class).newInstance(stack,arguments, map);
         } catch (InstantiationException | IllegalAccessException
