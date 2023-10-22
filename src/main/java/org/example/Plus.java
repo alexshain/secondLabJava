@@ -3,7 +3,7 @@ package org.example;
 import java.util.Stack;
 
 public class Plus extends SingleOperator{
-    Plus(Stack<Double> stack) {
+    Plus(Stack<Double> stack) throws Exception{
         super(stack);
     }
 

@@ -5,11 +5,8 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        //Scanner in = new Scanner(System.in); //Сделаю с файла, когда тесты писать буду
-        //String fileName = in.nextLine();
         Main a = new Main();
-        a.performer("/Users/sasha/IdeaProjects/SecondLab/file.txt");
-        //in.close();
+        a.performer("/Users/sasha/IdeaProjects/SecondLab/test2.txt");
     }
 
     public void performer(String fileName) {
@@ -28,7 +25,7 @@ public class Main {
                 }
                 Factory factory = new Factory(stack, arguments, map);
                 try {
-                    var calculate = factory.create(parts[0]);
+                    Command calculate = factory.create(parts[0]);
                     calculate.toDo();
                 } catch (Exception e) {
                     System.out.println(e.getMessage());

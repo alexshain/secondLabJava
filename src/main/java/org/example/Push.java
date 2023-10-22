@@ -26,7 +26,7 @@ public class Push implements Command {
                 }
             }
         } catch (Exception e) {
-            System.out.println("Undefined parameter");
+            throw new Exception("Undefined parameter");
         }
     }
 }
