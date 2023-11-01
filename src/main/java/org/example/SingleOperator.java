@@ -9,8 +9,8 @@ public abstract class SingleOperator implements Command{
         this.stack = stack;
     }
 
-    Stack<Double> getStack() throws Exception{
-        if(stack.size() < 2) {throw new Exception("Not enough parameters on stack");}
+    Stack<Double> getStack() throws InvalidStackLengthException{
+        if(stack.size() < 2) {throw new InvalidStackLengthException("Not enough parameters on stack");}
         return stack;
     }
 
