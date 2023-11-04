@@ -1,0 +1,60 @@
+окт. 31, 2023 12:23:55 AM org.example.Divide toDo
+INFO: Dividing the top two elements of the stack
+окт. 31, 2023 12:23:55 AM org.example.Divide toDo
+INFO: Dividing the top two elements of the stack
+окт. 31, 2023 12:23:55 AM org.example.Divide toDo
+INFO: Dividing the top two elements of the stack
+окт. 31, 2023 11:10:53 PM org.example.Divide toDo
+INFO: Dividing the top two elements of the stack
+окт. 31, 2023 11:10:53 PM org.example.Divide toDo
+INFO: Dividing the top two elements of the stack
+окт. 31, 2023 11:10:53 PM org.example.Divide toDo
+INFO: Dividing the top two elements of the stack
+окт. 31, 2023 11:11:03 PM org.example.Main performer
+INFO: The factory creates an instance of the class for the passed command
+окт. 31, 2023 11:11:03 PM org.example.Factory create
+INFO: Getting a class on command
+окт. 31, 2023 11:11:04 PM org.example.Factory create
+INFO: Initialization of class constructor
+окт. 31, 2023 11:11:04 PM org.example.Define toDo
+INFO: Parameter initialization
+окт. 31, 2023 11:11:04 PM org.example.Main performer
+INFO: Reading a new command
+окт. 31, 2023 11:11:04 PM org.example.Main performer
+INFO: The factory creates an instance of the class for the passed command
+окт. 31, 2023 11:11:04 PM org.example.Factory create
+INFO: Getting a class on command
+окт. 31, 2023 11:11:04 PM org.example.Factory create
+INFO: Initialization of class constructor
+окт. 31, 2023 11:11:04 PM org.example.Push toDo
+INFO: Push element(s) on stack
+окт. 31, 2023 11:11:04 PM org.example.Main performer
+WARNING: No passed arguments: 
+окт. 31, 2023 11:11:04 PM org.example.Main performer
+INFO: Reading a new command
+окт. 31, 2023 11:11:04 PM org.example.Main performer
+INFO: The factory creates an instance of the class for the passed command
+окт. 31, 2023 11:11:04 PM org.example.Factory create
+INFO: Getting a class on command
+окт. 31, 2023 11:11:04 PM org.example.Factory create
+INFO: Initialization of class constructor
+окт. 31, 2023 11:11:04 PM org.example.Sqrt toDo
+INFO: Square root calculation
+окт. 31, 2023 11:11:04 PM org.example.Main performer
+WARNING: Stack is empty: 
+окт. 31, 2023 11:11:04 PM org.example.Main performer
+INFO: Reading a new command
+окт. 31, 2023 11:11:04 PM org.example.Main performer
+INFO: The factory creates an instance of the class for the passed command
+окт. 31, 2023 11:11:04 PM org.example.Factory create
+INFO: Getting a class on command
+окт. 31, 2023 11:11:04 PM org.example.Factory create
+INFO: Initialization of class constructor
+окт. 31, 2023 11:11:04 PM org.example.Print toDo
+INFO: Print top of stack
+окт. 31, 2023 11:11:04 PM org.example.Main performer
+WARNING: Stack is empty: 
+окт. 31, 2023 11:11:04 PM org.example.Main performer
+INFO: Reading a new command
+окт. 31, 2023 11:11:04 PM org.example.Main performer
+INFO: File is closing
