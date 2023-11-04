@@ -9,8 +9,8 @@ import java.util.logging.Logger;
 
 public class Parser {
     private static final Logger LOGGER = Logger.getLogger(Parser.class.getName());
-    List<String> stringFile;
 
+    List<String> stringFile;
     Parser(List<String> stringFile) {
         this.stringFile = stringFile;
     }
@@ -38,3 +38,4 @@ public class Parser {
         }
     }
 }
+
